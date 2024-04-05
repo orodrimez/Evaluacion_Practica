@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[Cliente]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nombre] NVARCHAR(100) NOT NULL, 
+    [FechaNacimiento] DATE NULL, 
+    [Celular] VARCHAR(15) NULL, 
+    [Email] VARCHAR(MAX) NOT NULL
+)
+
+GO
+
+
+insert into Cliente values ( 'Juan Perex', '01-01-2000', '5566778899', 'juanperez@gmail.com' )
+insert into Cliente values ( 'Ermenegildo Alcazar', '01-01-1800', '5566778800', 'ermenegildo@gmail.com' )
+
+update Cliente set Email='ermenegildoa@gmail.com' where Id=2
+
+delete from Cliente where Id = 2
